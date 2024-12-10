@@ -1,0 +1,194 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+.App {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: 
+  "sidebar background"
+  "sidebar projects"
+  "sidebar skills"
+  "sidebar footer";
+}
+
+
+/* =========================================== sidebar ===================================================== */
+
+.sidebar {
+  top: 0;
+  left: 0;
+  position: sticky;
+  align-self: start;
+  min-height: 100vh;
+  grid-area: sidebar;
+  background: rgb(49, 36, 79);
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.profile-picture {
+  width: 127px;
+  height: 127px;
+  background-color: red;
+  border-radius: 75px;
+  background-image: linear-gradient(to right, rgb(97, 67, 165), rgb(178, 78, 147));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-image {
+  border-radius: 75px;
+}
+
+
+.sidebar ul li{
+  margin: 25px;
+}
+
+
+.sidebar ul li a{
+  position: relative;
+  color: grey;
+  font-size: xx-small;
+  font-weight: bold;
+  padding-bottom: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1.5px solid rgba(128, 128, 128, 0.342);
+
+  transition: all .25s ease-in-out;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a:focus {
+  color: rgb(171, 171, 171);
+}
+
+.sidebar ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1.5px;
+  background-color: rgba(128, 128, 128, 0.342);
+
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: all .25s ease-in-out;
+}
+
+.sidebar ul li a:hover::before {
+  transform: scaleX(1);
+  background-image: linear-gradient(to right, rgb(97, 67, 165), rgb(178, 78, 147));
+}
+
+
+
+
+
+
+
+/* -----------------------------------background section ========================================= */
+
+
+.background {
+  grid-area: background;
+  background: rgb(94, 66, 165);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 45px;
+  gap: 15px;
+}
+
+.contact-me {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid white;
+  color: white;
+  transition: all .45s ease-in-out;
+}
+
+.contact-me:hover {
+  background-color: rgba(128, 128, 128, 0.326);
+}
+
+.contact-me a {
+  color: white;
+}
+
+/* -----------------------------------projects section ========================================= */
+
+.projects {
+  /* height: minmax(100vh, auto); */
+  min-height: 100vh;
+  grid-area: projects;
+  background: green;
+}
+
+.project-one {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.project-img {
+  background-color: red;
+  width: 200px;
+  height: 220px;
+}
+
+.project-content {
+  display: flex;
+  color: white;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  gap: 12px;
+  background-color: rgb(79,82,181);
+}
+
+.project-content p {
+  font-size: x-small;
+}
+
+/* -----------------------------------skills section ========================================= */
+
+.skills {
+  height: 100vh;
+  grid-area: skills;
+  background: rgb(183, 77, 145);
+  padding: 30px;
+  gap: 100px;
+}
+
+.skill-card {
+  border: .2px solid rgba(232, 231, 231, 0.552);
+  background-color: rgba(177, 177, 177, 0.174);
+}
+
+/* -----------------------------------footer section ========================================= */
+
+.footer {
+  height: 50vh;
+  grid-area: footer;
+  background: yellow;
+}
