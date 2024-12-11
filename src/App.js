@@ -111,6 +111,10 @@ function App() {
         <section>
           <h1>React</h1>
           <p>for the past 3 years, i have been teaching react</p>
+          <h1>Express</h1>
+          <p>for the past 3 years, i have been teaching express</p>
+          <h1>Python</h1>
+          <p>for the past year, i have been working as a python developer</p>
         </section>
       </div>
       </section>
