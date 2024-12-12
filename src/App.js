@@ -115,6 +115,8 @@ function App() {
           <p>for the past 3 years, i have been teaching express</p>
           <h1>Python</h1>
           <p>for the past year, i have been working as a python developer</p>
+          <h1>test</h1>
+          <p>this is a test for merge conflicts</p>
         </section>
       </div>
       </section>
